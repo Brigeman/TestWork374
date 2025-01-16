@@ -18,3 +18,7 @@ def test_db() -> Session:
         yield db
     finally:
         db.close()
+
+@pytest.fixture
+def api_key_header():
+    return {"Authorization": "ApiKey 5e884898da28047151d0e56f8dc6292773603d0d"}

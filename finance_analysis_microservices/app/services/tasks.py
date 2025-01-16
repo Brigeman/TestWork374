@@ -1,11 +1,11 @@
 from celery import Celery
 
-celery_app = Celery(
-    "finance_tasks",
+celery = Celery(
+    __name__,
     broker="redis://redis:6379/0",
-    backend="redis://redis:6379/0"
+    backend="redis://redis:6379/0",
 )
 
-@celery_app.task
-def example_task(x, y):
-    return x + y
+@celery.task
+def update_statistics(transaction_data):
+    print(f"Обновляю статистику для транзакции: {transaction_data}")
