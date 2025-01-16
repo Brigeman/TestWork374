@@ -1,0 +1,19 @@
+.
+├── finance_analysis_microservices
+│   ├── Dockerfile
+│   ├── app
+│   │   ├── __init__.py
+│   │   ├── config.py
+│   │   ├── db_setup.py
+│   │   ├── main.py
+│   │   ├── models.py
+│   │   ├── routes
+│   │   │   └── transactions.py
+│   │   ├── schemas.py
+│   │   └── services
+│   │       └── tasks.py
+│   ├── docker-compose.yml
+│   └── requirements.txt
+└── structure.txt
+
+5 directories, 12 files

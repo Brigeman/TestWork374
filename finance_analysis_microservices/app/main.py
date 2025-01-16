@@ -1,7 +1,6 @@
 from fastapi import FastAPI
+from app.routes.transactions import router as transactions_router
 
 app = FastAPI()
 
-@app.get("/")
-def read_root():
-    return {"message": "Welcome to Finance Analysis Microservice"}
+app.include_router(transactions_router)
