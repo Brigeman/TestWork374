@@ -5,3 +5,6 @@ psycopg2-binary
 celery
 redis
 python-dotenv
+pytest
+pytest-asyncio
+httpx
